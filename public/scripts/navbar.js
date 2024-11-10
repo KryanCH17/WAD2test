@@ -14,15 +14,16 @@ const firebaseConfig = {
     measurementId: "G-5S6WET94BS"
   };
 
-// Initialize Firebase
+// Initialize Firebase if it hasn’t been initialized already
 let app;
-if (!getApps().length) {
-    app = initializeApp(firebaseConfig);
+if (!firebase.apps.length) {
+    app = firebase.initializeApp(firebaseConfig);
 } else {
-    app = getApps()[0];
+    app = firebase.apps[0];
 }
 
-const auth = getAuth(app);
+// Initialize Firebase services
+const auth = firebase.auth();
 
 // Vue App for Navbar
 const navbarApp = Vue.createApp({

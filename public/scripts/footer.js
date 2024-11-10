@@ -18,15 +18,15 @@ const firebaseConfig = {
 
 // Initialize Firebase if it hasn’t been initialized already
 let app;
-if (!getApps().length) {
-    app = initializeApp(firebaseConfig);
+if (!firebase.apps.length) {
+    app = firebase.initializeApp(firebaseConfig);
 } else {
-    app = getApps()[0];
+    app = firebase.apps[0];
 }
 
 // Initialize Firebase services
-const auth = getAuth(app);
-const db = getFirestore(app);
+const auth = firebase.auth();
+const db = firebase.firestore();
 
 // Vue app setup
 const vueApp = Vue.createApp({
