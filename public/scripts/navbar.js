@@ -1,5 +1,5 @@
-import { initializeApp, getApps } from "firebase/app";
-import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+// import { initializeApp, getApps } from "firebase/app";
+// import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 
 // Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
